@@ -1,0 +1,145 @@
+/* Add this to your existing CSS file or create a new one */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+body {
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+.gameArea {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.allbox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-width: 300px;
+  margin: 0 auto;
+  /* Center the grid */
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.box:hover {
+  background-color: #ddd;
+}
+
+/* Winner styling */
+.box.winner {
+  background-color: #7effb1;
+  /* Green background for the winning box */
+}
+
+/* Reset button styling */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3490dc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: block;
+  margin: 0 auto;
+  /* Center the button */
+}
+
+button:hover {
+  background-color: #2779bd;
+}
+
+/* Score table styling */
+.theborder {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 200px;
+  margin: 0 auto;
+  /* Center the table */
+}
+h1{
+  font-size: 3rem;
+  margin-bottom: -4rem;
+}
+thead th,
+tbody td {
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #ddd;
+}
+.toosmall {
+  margin-left: 3rem;
+}
+/* Animation for winner announcement */
+@keyframes winnerAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Winner announcement styling */
+#winnerAnnouncement {
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: bold;
+  animation: winnerAnimation 1s ease-in-out infinite;
+  color: #74bbe4;
+  /* Red color for the winner announcement */
+}
+
+/* Responsive styles for displays smaller than 750px */
+@media (max-width: 750px) {
+  .changeFlex {
+    flex-wrap: wrap;
+  }
+
+  #winnerAnnouncement {
+    font-size: 16px;
+  }
+  h1{
+    font-size: 3rem;
+    margin-bottom: 0rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .toosmall {
+    margin-left: 0rem;
+  }
+  #winnerAnnouncement {
+    font-size: 12px;
+  }
+  
+}
+@media (max-width: 650px) {
+  .tagwidth {
+    width: 10rem;
+    height: 2rem;
+  }
+
+}
