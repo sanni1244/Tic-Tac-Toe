@@ -4,7 +4,7 @@ Welcome to the Tic Tac Toe game repository! This simple yet classic game is impl
 <h3>Features:</h3>
 Clean and intuitive user interface.
 Two-player mode for head-to-head matches.
-Feel free to check out the game <a href="https://sanni1244.github.io/Tic-Tac-Toe/">Tic Tac Toe</a> and start playing!
+Feel free to check out the game <a href="https://tic-tac-toe-theta-ashy-27.vercel.app/">Tic Tac Toe</a> and start playing!
 
 
 <h3>Usage:</h3>
